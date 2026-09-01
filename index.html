@@ -1,0 +1,1789 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>임플란트 어버이날 깜짝특가 - 무료 상담 신청</title>
+  <meta name="description" content="어버이날 10일간 깜짝특가! 국산 임플란트 20만원, 전체 300만원. 간단뼈이식 무료. 5/10일 마감. 지금 바로 무료 상담 신청하세요.">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WQFVV67C');</script>
+  <!-- End Google Tag Manager -->
+
+  <style>
+    /* ============================================
+       CSS Variables
+       ============================================ */
+    :root {
+      --primary: #1A6FBB;
+      --primary-dark: #155a99;
+      --primary-light: #e8f2fb;
+      --accent: #E63946;
+      --accent-gradient: linear-gradient(135deg, #E63946, #FF6B35);
+      --badge-bg: #FFF3CD;
+      --badge-text: #B8860B;
+      --bg: #FFFFFF;
+      --card-border: #E5E7EB;
+      --text: #111111;
+      --sub-text: #666666;
+      --light-gray: #F9FAFB;
+      --success: #22C55E;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+      --radius: 16px;
+      --radius-sm: 12px;
+      --radius-pill: 50px;
+      --transition: all 0.3s ease;
+    }
+
+    /* ============================================
+       Reset & Base
+       ============================================ */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+      background: var(--light-gray);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ============================================
+       Container
+       ============================================ */
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      background: var(--bg);
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ============================================
+       Screen Management
+       ============================================ */
+    .screen {
+      display: none;
+      height: 100dvh;
+      padding: 16px 20px;
+      animation: fadeIn 0.3s ease;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .screen.active {
+      display: flex;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ============================================
+       Landing Screen
+       ============================================ */
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+
+    @keyframes ctaBlink {
+      0%, 100% { background: var(--primary); }
+      50% { background: #E63946; }
+    }
+
+    .cta-blink {
+      animation: ctaBlink 1s ease-in-out infinite;
+    }
+
+    /* Landing: 한 화면에 모두 맞추기 */
+    #screen-landing {
+      display: none;
+      height: 100dvh;
+      min-height: unset;
+      padding: 16px 20px;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: visible;
+    }
+
+    #screen-landing.active {
+      display: flex;
+    }
+
+    .landing-header {
+      text-align: center;
+      padding-top: 0;
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+
+    .landing-header h1 {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+
+    .landing-header h1 .highlight {
+      color: var(--primary);
+    }
+
+    .landing-header p {
+      font-size: 14px;
+      color: var(--sub-text);
+    }
+
+    .badge-hot {
+      display: inline-block;
+      background: var(--accent-gradient);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 4px;
+      animation: pulse 2s infinite;
+    }
+
+    .countdown-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #FFF3CD;
+      color: #B8860B;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 6px;
+    }
+
+    .countdown-timer {
+      font-size: 15px;
+      font-weight: 800;
+      color: #E63946;
+      letter-spacing: 0.5px;
+    }
+
+    .countdown-ended {
+      color: #999;
+      font-size: 13px;
+    }
+
+    /* ============================================
+       Pricing Cards
+       ============================================ */
+    .pricing-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 0;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .pricing-card {
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 12px 14px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .pricing-card:active {
+      transform: scale(0.98);
+    }
+
+    .card-header {
+      display: none;
+    }
+
+    .pricing-card .card-emoji {
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+
+    .card-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .pricing-card .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .pricing-card .card-desc {
+      font-size: 11px;
+      color: var(--sub-text);
+      margin-bottom: 0;
+    }
+
+    .card-right {
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .pricing-card .card-price {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .pricing-card .card-price span {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--sub-text);
+    }
+
+    .bone-badge {
+      display: inline-block;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    .best-badge {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    /* ============================================
+       Trust Indicators
+       ============================================ */
+    .trust-indicators {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 0;
+      padding: 10px 14px;
+      background: var(--light-gray);
+      border-radius: var(--radius-sm);
+      flex-shrink: 0;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--sub-text);
+    }
+
+    .trust-item .trust-icon {
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    /* ============================================
+       Notification Bar
+       ============================================ */
+    .notification-bar {
+      background: #F0FFF4;
+      border: 1px solid #C6F6D5;
+      border-radius: 50px;
+      padding: 8px 16px;
+      overflow: hidden;
+      height: 36px;
+      flex-shrink: 0;
+    }
+
+    .notification-bar.hidden {
+      display: none;
+    }
+
+    .notification-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #2D6A2E;
+      white-space: nowrap;
+      animation: slideNotification 0.5s ease;
+    }
+
+    @keyframes slideNotification {
+      from { opacity: 0; transform: translateY(100%); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ============================================
+       CTA Buttons
+       ============================================ */
+    .cta-primary {
+      display: block;
+      width: 100%;
+      padding: 18px 24px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-align: center;
+      transition: var(--transition);
+      min-height: 56px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .cta-primary:active {
+      background: var(--primary-dark);
+      transform: scale(0.98);
+    }
+
+    .cta-primary:disabled {
+      background: #B0C4DE;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .cta-share {
+      display: block;
+      width: 100%;
+      padding: 14px 24px;
+      background: #FCD34D;
+      color: #92400E;
+      font-size: 15px;
+      font-weight: 600;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-align: center;
+      margin-top: 12px;
+      transition: var(--transition);
+      min-height: 48px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .cta-share:active {
+      background: #F59E0B;
+      transform: scale(0.98);
+    }
+
+    .privacy-note {
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+      margin-top: 12px;
+    }
+
+    .privacy-note::before {
+      content: '🔒 ';
+    }
+
+    /* ============================================
+       Step Header (Quiz Steps)
+       ============================================ */
+    .step-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4px;
+      padding-bottom: 4px;
+      flex-shrink: 0;
+    }
+
+    .btn-back {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background: none;
+      border: none;
+      color: var(--sub-text);
+      font-size: 15px;
+      cursor: pointer;
+      padding: 4px;
+      min-height: 40px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn-back:active {
+      color: var(--text);
+    }
+
+    .step-indicator {
+      font-size: 14px;
+      color: var(--sub-text);
+      font-weight: 500;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 4px;
+      background: #E5E7EB;
+      border-radius: 2px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .progress-bar .progress-fill {
+      height: 100%;
+      background: var(--primary);
+      border-radius: 2px;
+      transition: width 0.4s ease;
+    }
+
+    /* ============================================
+       Quiz Question
+       ============================================ */
+    .quiz-question {
+      text-align: center;
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+
+    .quiz-question h2 {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+
+    .quiz-question p {
+      font-size: 13px;
+      color: var(--sub-text);
+    }
+
+    /* ============================================
+       Selection Cards (Quiz Options)
+       ============================================ */
+    .selection-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 12px;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .selection-card {
+      border: 2px solid var(--card-border);
+      border-radius: 18px;
+      padding: 0;
+      cursor: pointer;
+      transition: var(--transition);
+      -webkit-tap-highlight-color: transparent;
+      display: flex;
+      align-items: stretch;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .selection-card:active {
+      border-color: var(--primary);
+      transform: scale(0.98);
+    }
+
+    .sel-header {
+      display: none;
+    }
+
+    .sel-left {
+      flex: 1;
+      padding: 18px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .selection-card .sel-emoji {
+      font-size: 30px;
+      flex-shrink: 0;
+    }
+
+    .sel-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .selection-card .sel-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .sel-bonus-badge {
+      display: inline-block;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    .sel-price-box {
+      background: var(--primary);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px;
+      flex-shrink: 0;
+      min-width: 90px;
+      gap: 2px;
+    }
+
+    .sel-price-main {
+      font-size: 22px;
+      font-weight: 800;
+      white-space: nowrap;
+      line-height: 1.2;
+    }
+
+    .sel-price-unit {
+      font-size: 12px;
+      font-weight: 500;
+      opacity: 0.85;
+    }
+
+    .sel-price-tag {
+      margin-top: 4px;
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .selection-card .sel-desc {
+      font-size: 13px;
+      color: var(--sub-text);
+    }
+
+    .selection-card .sel-price span {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--sub-text);
+    }
+
+    /* ============================================
+       Form Screen (Step 3)
+       ============================================ */
+    .form-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--card-border);
+      flex-shrink: 0;
+    }
+
+    .form-header .btn-back {
+      min-height: 40px;
+    }
+
+    .form-header h2 {
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    .summary-card {
+      border: 2px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 10px 16px;
+      background: var(--primary-light);
+      margin-bottom: 14px;
+      flex-shrink: 0;
+    }
+
+    .summary-card .summary-label {
+      font-size: 12px;
+      color: var(--sub-text);
+      margin-bottom: 2px;
+    }
+
+    .summary-card .summary-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .summary-card .summary-price {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .summary-card .summary-bonus {
+      display: inline-block;
+      margin-top: 4px;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    .form-section-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 2px;
+      flex-shrink: 0;
+    }
+
+    .form-section-desc {
+      font-size: 13px;
+      color: var(--sub-text);
+      margin-bottom: 12px;
+      flex-shrink: 0;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+      flex-shrink: 0;
+    }
+
+    .input-wrapper {
+      display: flex;
+      align-items: center;
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius-sm);
+      padding: 0 16px;
+      transition: var(--transition);
+      background: #fff;
+    }
+
+    .input-wrapper:focus-within {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(26, 111, 187, 0.1);
+    }
+
+    .input-wrapper .input-icon {
+      font-size: 18px;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    .input-wrapper input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 16px 0;
+      font-size: 16px;
+      font-family: inherit;
+      color: var(--text);
+      background: transparent;
+      min-height: 48px;
+    }
+
+    .input-wrapper input::placeholder {
+      color: #B0B0B0;
+    }
+
+    /* ============================================
+       Privacy Consent
+       ============================================ */
+    #screen-form {
+      overflow-y: auto;
+    }
+
+    #screen-form form {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    #screen-form form .cta-primary {
+      margin-top: auto;
+    }
+
+    .privacy-consent {
+      margin: 8px 0;
+    }
+
+    .consent-checkbox {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .consent-checkbox input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      accent-color: var(--primary);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    .consent-checkbox label {
+      font-size: 14px;
+      color: var(--sub-text);
+      cursor: pointer;
+      line-height: 1.5;
+    }
+
+    .consent-checkbox label .required-tag {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .privacy-toggle {
+      background: none;
+      border: none;
+      color: var(--primary);
+      font-size: 13px;
+      cursor: pointer;
+      padding: 8px 0;
+      margin-top: 4px;
+      text-decoration: underline;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .privacy-content {
+      display: none;
+      padding: 14px;
+      margin-top: 8px;
+      background: var(--light-gray);
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      color: var(--sub-text);
+      line-height: 1.8;
+    }
+
+    .privacy-content.open {
+      display: block;
+    }
+
+    .form-security-note {
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+      margin-top: 8px;
+      margin-bottom: 10px;
+      flex-shrink: 0;
+    }
+
+    /* ============================================
+       Completion Screen
+       ============================================ */
+    .completion-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex: 1;
+      padding: 20px;
+    }
+
+    .completion-check {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--success);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      animation: checkBounce 0.6s ease;
+    }
+
+    @keyframes checkBounce {
+      0% { transform: scale(0); opacity: 0; }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .completion-check svg {
+      width: 40px;
+      height: 40px;
+      stroke: #fff;
+      stroke-width: 3;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .completion-check svg path {
+      stroke-dasharray: 50;
+      stroke-dashoffset: 50;
+      animation: drawCheck 0.5s 0.3s ease forwards;
+    }
+
+    @keyframes drawCheck {
+      to { stroke-dashoffset: 0; }
+    }
+
+    .completion-screen h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .completion-screen p {
+      font-size: 16px;
+      color: var(--sub-text);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .btn-home {
+      display: inline-block;
+      padding: 14px 32px;
+      background: var(--light-gray);
+      color: var(--sub-text);
+      font-size: 15px;
+      font-weight: 600;
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: var(--transition);
+      -webkit-tap-highlight-color: transparent;
+      min-height: 48px;
+    }
+
+    .btn-home:active {
+      background: #E5E7EB;
+      transform: scale(0.98);
+    }
+
+    /* ============================================
+       Loading Spinner
+       ============================================ */
+    .spinner {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255,255,255,0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* ============================================
+       Error Toast
+       ============================================ */
+    .toast {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-100px);
+      max-width: 440px;
+      width: calc(100% - 40px);
+      padding: 14px 20px;
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 500;
+      z-index: 200;
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .toast.error {
+      background: #FEE2E2;
+      color: #991B1B;
+      border: 1px solid #FCA5A5;
+    }
+
+    .toast.success {
+      background: #DCFCE7;
+      color: #166534;
+      border: 1px solid #86EFAC;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* ============================================
+       Utility
+       ============================================ */
+    .mt-12 { margin-top: 12px; }
+    .mb-24 { margin-bottom: 24px; }
+    .text-center { text-align: center; }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQFVV67C"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="container">
+
+    <!-- ==========================================
+         Screen: Landing
+         ========================================== -->
+    <div id="screen-landing" class="screen active">
+      <div class="landing-header">
+        <span class="badge-hot">&#x2600;&#xFE0F; 이달의 파격 특가</span><br>
+        <div class="countdown-wrap">
+          <span>&#x23F0; 마감까지</span>
+          <span class="countdown-timer" id="countdown-timer">계산 중...</span>
+        </div>
+        <h1>임플란트 <span class="highlight">파격 할인</span></h1>
+        <p>"이 가격, 일주일 뒤면 끝납니다"</p>
+      </div>
+
+      <div class="pricing-cards">
+        <!-- 국산 정품 임플란트 -->
+        <div class="pricing-card" style="border: 2px solid var(--accent); box-shadow: 0 0 0 2px var(--accent)20;">
+          <span class="card-emoji">&#x1F31F;</span>
+          <div class="card-info">
+            <div class="card-title"><span style="color:var(--accent)">오스템</span> 정품 임플란트 <span class="best-badge">&#x2B50; HOT</span></div>
+            <div class="card-desc">국내 1위 브랜드</div>
+          </div>
+          <div class="card-right">
+            <div class="card-price">20만원<span>/개</span></div>
+            <span class="bone-badge">&#x1F381; 간단뼈이식 무료</span>
+          </div>
+        </div>
+
+        <!-- 국산 전체 임플란트 -->
+        <div class="pricing-card">
+          <span class="card-emoji">&#x2728;</span>
+          <div class="card-info">
+            <div class="card-title">전체 임플란트 <span class="best-badge">&#x26A1; BEST</span></div>
+            <div class="card-desc">국내 공식 정품</div>
+          </div>
+          <div class="card-right">
+            <div class="card-price">300만원</div>
+            <span class="bone-badge">&#x1F381; 간단뼈이식 무료</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="trust-indicators">
+        <div class="trust-item">
+          <span class="trust-icon">&#x23F0;</span>
+          <span>상담 신청 후 1일 이내 연락</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">&#x2705;</span>
+          <span>검증된 치과 전문상담사 직접 상담</span>
+        </div>
+      </div>
+
+      <div id="notification-bar" class="notification-bar">
+        <div class="notification-text" id="notification-text">
+          &#x2705; <span id="notif-city">서울</span> <span id="notif-name">김**</span>님 방금 상담 신청 완료! &#x1F389;
+        </div>
+      </div>
+
+      <div style="flex-shrink:0; padding-top: 8px;">
+        <button class="cta-primary cta-blink" onclick="showScreen('step1')">
+          무료 상담 신청하기 &#x2192;
+        </button>
+        <p class="privacy-note" style="margin-top:8px;">개인정보는 안전하게 보호됩니다</p>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         Screen: Step 1 - Treatment Selection
+         ========================================== -->
+    <div id="screen-step1" class="screen">
+      <div class="step-header">
+        <button class="btn-back" onclick="showScreen('landing')">
+          &#x276E; 뒤로
+        </button>
+        <span class="step-indicator">1 / 2</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 50%"></div>
+      </div>
+
+      <div class="quiz-question">
+        <h2>어떤 시술에 관심 있으신가요? &#x1F914;</h2>
+        <p>맞춤 상담을 위해 선택해주세요</p>
+      </div>
+
+      <div class="selection-cards">
+        <div class="selection-card" onclick="selectTreatment('osstem')">
+          <div class="sel-left">
+            <span class="sel-emoji">&#x1F31F;</span>
+            <div class="sel-body">
+              <div class="sel-title">오스템 정품 임플란트</div>
+              <span class="sel-bonus-badge">&#x1F381; 간단뼈이식+지대주+보철 무료</span>
+            </div>
+          </div>
+          <div class="sel-price-box">
+            <div class="sel-price-main">20만원</div>
+            <div class="sel-price-tag">기간한정 특가</div>
+          </div>
+        </div>
+
+        <div class="selection-card" onclick="selectTreatment('full')">
+          <div class="sel-left">
+            <span class="sel-emoji">&#x2728;</span>
+            <div class="sel-body">
+              <div class="sel-title">국산정품 전체 임플란트</div>
+              <span class="sel-bonus-badge">&#x1F381; 간단뼈이식+지대주+보철 무료</span>
+            </div>
+          </div>
+          <div class="sel-price-box">
+            <div class="sel-price-main">300만원</div>
+            <div class="sel-price-tag">기간한정 특가</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         Screen: Step 2 - Timing Selection
+         ========================================== -->
+    <div id="screen-step2" class="screen">
+      <div class="step-header">
+        <button class="btn-back" onclick="showScreen('step1')">
+          &#x276E; 뒤로
+        </button>
+        <span class="step-indicator">2 / 2</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 100%"></div>
+      </div>
+
+      <div class="quiz-question">
+        <h2>&#x23F0; 언제쯤 시술 받고 싶으세요? &#x23F0;</h2>
+        <p>원하시는 시기를 선택해주세요</p>
+      </div>
+
+      <div class="selection-cards">
+        <div class="selection-card" onclick="selectTiming('최대한 빨리')">
+          <span class="sel-emoji">&#x1F525;</span>
+          <div class="sel-body">
+            <div class="sel-title">최대한 빨리</div>
+            <div class="sel-desc">가능한 빠른 시일 내</div>
+          </div>
+        </div>
+
+        <div class="selection-card" onclick="selectTiming('1~2주 내')">
+          <span class="sel-emoji">&#x1F4C5;</span>
+          <div class="sel-body">
+            <div class="sel-title">1~2주 내</div>
+            <div class="sel-desc">조금 여유있게</div>
+          </div>
+        </div>
+
+        <div class="selection-card" onclick="selectTiming('한 달 내')">
+          <span class="sel-emoji">&#x1F4C5;</span>
+          <div class="sel-body">
+            <div class="sel-title">한 달 내</div>
+            <div class="sel-desc">천천히 준비하면서</div>
+          </div>
+        </div>
+
+        <div class="selection-card" onclick="selectTiming('상담 먼저')">
+          <span class="sel-emoji">&#x1F4AC;</span>
+          <div class="sel-body">
+            <div class="sel-title">상담 먼저</div>
+            <div class="sel-desc">시기는 상담 후 결정</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         Screen: Step 3 - Contact Form
+         ========================================== -->
+    <div id="screen-form" class="screen">
+      <div class="form-header">
+        <button class="btn-back" onclick="showScreen('step2')">
+          &#x276E;
+        </button>
+        <h2>상담 신청</h2>
+      </div>
+
+      <!-- Dynamic Summary Card -->
+      <div class="summary-card" id="summary-card">
+        <div class="summary-label">선택하신 시술</div>
+        <div class="summary-title" id="summary-title">오스템 정품 임플란트</div>
+        <div class="summary-price" id="summary-price">20만원/개 &#x2728;</div>
+        <span class="summary-bonus" id="summary-bonus">&#x1F381; 간단뼈이식 무료</span>
+      </div>
+
+      <div class="form-section-title">연락처를 남겨주세요 &#x1F4DD;</div>
+      <div class="form-section-desc">상담원이 맞춤 상담을 도와드립니다</div>
+
+      <form id="consultation-form" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <div class="input-wrapper">
+            <span class="input-icon">&#x1F464;</span>
+            <input
+              type="text"
+              id="input-name"
+              placeholder="홍길동"
+              required
+              autocomplete="name"
+              maxlength="20"
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-wrapper">
+            <span class="input-icon">&#x1F4DE;</span>
+            <input
+              type="tel"
+              id="input-phone"
+              placeholder="010-0000-0000"
+              required
+              autocomplete="tel"
+              maxlength="13"
+              inputmode="numeric"
+              oninput="formatPhone(this)"
+            >
+          </div>
+        </div>
+
+        <div class="privacy-consent">
+          <div class="consent-checkbox">
+            <input type="checkbox" id="consent-check" checked required>
+            <label for="consent-check">
+              <span class="required-tag">[필수]</span> 개인정보 수집 및 이용에 동의합니다.
+            </label>
+          </div>
+          <button type="button" class="privacy-toggle" onclick="togglePrivacy()">
+            개인정보취급방침 보기
+          </button>
+          <div class="privacy-content" id="privacy-content">
+            <strong>개인정보 수집 및 이용 동의서</strong><br><br>
+            1. 수집 항목: 이름, 연락처<br>
+            2. 수집 목적: 임플란트 상담 서비스 제공<br>
+            3. 보유 기간: 상담 완료 후 1년<br>
+            4. 임시 저장: 네트워크 오류 등 전송 실패 시 이용자 브라우저에 임시 저장되며, 전송 성공 후 자동 삭제됩니다.<br>
+            5. 동의 거부 시 상담 신청이 불가합니다.<br><br>
+            &#x00A9; 똑똑플란트치과의원
+          </div>
+        </div>
+
+        <p class="form-security-note">&#x1F512; 개인정보는 안전하게 암호화됩니다 &#x2764;&#xFE0F;</p>
+
+        <button type="submit" class="cta-primary" id="submit-btn">
+          무료 상담 신청하기
+        </button>
+      </form>
+    </div>
+
+    <!-- ==========================================
+         Screen: Completion
+         ========================================== -->
+    <div id="screen-complete" class="screen">
+      <div class="completion-screen">
+        <div class="completion-check">
+          <svg viewBox="0 0 40 40">
+            <path d="M10 20 L18 28 L30 12"/>
+          </svg>
+        </div>
+        <h2>상담 신청이 완료되었습니다! &#x1F389;</h2>
+        <p>1일 이내 전문 상담사가<br>연락드립니다</p>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         Toast
+         ========================================== -->
+    <div class="toast error" id="toast"></div>
+
+  </div>
+
+  <script>
+    /* ===========================================
+       Configuration
+       =========================================== */
+    // Apps Script URL은 서버(api/submit.js)로 이동. 브라우저는 항상 /api/submit만 호출.
+    const API_URL = '/api/submit';
+    const LS_KEY = 'implant_pending_leads_ad';    // 광고 랜딩 전용 localStorage 키
+
+    /* ===========================================
+       GTM DataLayer Push
+       =========================================== */
+    window.dataLayer = window.dataLayer || [];
+    function gtmPush(eventName, params) {
+      window.dataLayer.push(Object.assign({ event: eventName }, params || {}));
+    }
+
+    /* ===========================================
+       localStorage 백업 유틸
+       =========================================== */
+    function saveToLocal(data) {
+      try {
+        var list = JSON.parse(localStorage.getItem(LS_KEY) || '[]');
+        list.push(data);
+        localStorage.setItem(LS_KEY, JSON.stringify(list));
+      } catch (e) { /* 스토리지 가득 참 등 무시 */ }
+    }
+
+    async function retryPendingLeads() {
+      try {
+        var list = JSON.parse(localStorage.getItem(LS_KEY) || '[]');
+        if (!list.length) return;
+        var remaining = [];
+        for (var i = 0; i < list.length; i++) {
+          try {
+            var resp = await fetch(API_URL, {
+              method: 'POST',
+              body: JSON.stringify(list[i]),
+              headers: { 'Content-Type': 'application/json' }
+            });
+            if (!resp.ok) remaining.push(list[i]);
+          } catch (e) {
+            remaining.push(list[i]);
+          }
+        }
+        localStorage.setItem(LS_KEY, JSON.stringify(remaining));
+      } catch (e) {}
+    }
+
+    /* ===========================================
+       State
+       =========================================== */
+    const state = {
+      selectedTreatment: null,
+      selectedTiming: null,
+      currentScreen: 'landing'
+    };
+
+    const treatmentInfo = {
+      osstem: {
+        name: '오스템 정품 임플란트',
+        price: '20만원/개',
+        bonus: '🎁 간단뼈이식+지대주+보철 무료'
+      },
+      full: {
+        name: '국산정품 전체 임플란트',
+        price: '300만원',
+        bonus: '🎁 간단뼈이식+지대주+보철 무료'
+      }
+    };
+
+    /* ===========================================
+       Notifications
+       =========================================== */
+    const notifications = [
+      { city: '서울', name: '김**' },
+      { city: '부산', name: '이**' },
+      { city: '대구', name: '최**' },
+      { city: '인천', name: '박**' },
+      { city: '광주', name: '정**' },
+      { city: '대전', name: '한**' },
+      { city: '수원', name: '윤**' },
+      { city: '울산', name: '강**' },
+      { city: '강원', name: '조**' },
+      { city: '천안', name: '오**' },
+      { city: '청주', name: '신**' }
+    ];
+
+    let notifIndex = 0;
+    let notifInterval = null;
+
+    function startNotifications() {
+      const bar = document.getElementById('notification-bar');
+      if (bar) bar.classList.remove('hidden');
+
+      notifInterval = setInterval(function() {
+        notifIndex = (notifIndex + 1) % notifications.length;
+        var n = notifications[notifIndex];
+        var textEl = document.getElementById('notification-text');
+        textEl.style.animation = 'none';
+        // Force reflow
+        void textEl.offsetHeight;
+        document.getElementById('notif-city').textContent = n.city;
+        document.getElementById('notif-name').textContent = n.name;
+        textEl.style.animation = 'slideNotification 0.5s ease';
+      }, 3000);
+    }
+
+    function stopNotifications() {
+      if (notifInterval) {
+        clearInterval(notifInterval);
+        notifInterval = null;
+      }
+    }
+
+    /* ===========================================
+       Screen Navigation
+       =========================================== */
+    function showScreen(screenId) {
+      // Hide all screens
+      var screens = document.querySelectorAll('.screen');
+      for (var i = 0; i < screens.length; i++) {
+        screens[i].classList.remove('active');
+      }
+
+      // Map screen IDs
+      var elementId = 'screen-' + screenId;
+      var target = document.getElementById(elementId);
+      if (target) {
+        target.classList.add('active');
+      }
+
+      state.currentScreen = screenId;
+
+      // 완료 화면: 뒤로가기 차단
+      if (screenId === 'complete') {
+        history.pushState(null, '', location.href);
+        window.onpopstate = function() {
+          history.pushState(null, '', location.href);
+        };
+      }
+
+      // Manage notification bar visibility
+      if (screenId === 'landing') {
+        startNotifications();
+      } else {
+        stopNotifications();
+      }
+
+      // Scroll to top
+      window.scrollTo(0, 0);
+    }
+
+    /* ===========================================
+       Quiz Logic
+       =========================================== */
+    function selectTreatment(type) {
+      state.selectedTreatment = type;
+      updateSummaryCard();
+      gtmPush('quiz_step1_select', { treatment: type });
+      showScreen('step2');
+    }
+
+    function selectTiming(timing) {
+      state.selectedTiming = timing;
+      gtmPush('quiz_step2_select', { timing: timing });
+      showScreen('form');
+    }
+
+    function updateSummaryCard() {
+      var info = treatmentInfo[state.selectedTreatment];
+      if (!info) return;
+
+      document.getElementById('summary-title').textContent = info.name;
+      document.getElementById('summary-price').innerHTML = info.price + ' ✨';
+      document.getElementById('summary-bonus').innerHTML = info.bonus;
+    }
+
+    /* ===========================================
+       Phone Formatting
+       =========================================== */
+    function formatPhone(input) {
+      // Strip all non-digits
+      var value = input.value.replace(/[^0-9]/g, '');
+
+      // Limit to 11 digits
+      if (value.length > 11) {
+        value = value.substring(0, 11);
+      }
+
+      // Format: 010-0000-0000
+      if (value.length <= 3) {
+        input.value = value;
+      } else if (value.length <= 7) {
+        input.value = value.substring(0, 3) + '-' + value.substring(3);
+      } else {
+        input.value = value.substring(0, 3) + '-' + value.substring(3, 7) + '-' + value.substring(7);
+      }
+    }
+
+    /* ===========================================
+       Privacy Toggle
+       =========================================== */
+    function togglePrivacy() {
+      var content = document.getElementById('privacy-content');
+      var btn = content.previousElementSibling;
+      content.classList.toggle('open');
+      if (content.classList.contains('open')) {
+        btn.textContent = '개인정보취급방침 접기';
+      } else {
+        btn.textContent = '개인정보취급방침 보기';
+      }
+    }
+
+    /* ===========================================
+       스팸/장난 접수 방지
+       =========================================== */
+    var SPAM_WORDS = ['씨발', '시발', '씨팔', '씨부랄', '개새끼', '개새기', '병신', '지랄',
+      '좆같', '좆까', '미친놈', '미친년', '존나', '걸레', '창녀', '개년', '개자식',
+      '후레자식', '니미', '닥쳐', '꺼져', 'fuck', 'shit'];
+    var SUBMIT_HISTORY_KEY = 'implant_submit_history_ad';
+    var SUBMIT_COOLDOWN_MS = 5 * 60 * 1000; // 5분
+
+    // 초성/모음 낱자만 있는 이름 감지 (예: ㅋㅋㅋ, ㅁㄴㅇㄹ)
+    function containsJamoOnly(str) {
+      return /[ㄱ-ㆎ]/.test(str);
+    }
+
+    function containsProfanity(str) {
+      var normalized = str.replace(/\s/g, '').toLowerCase();
+      return SPAM_WORDS.some(function(w) { return normalized.indexOf(w) !== -1; });
+    }
+
+    // 같은 글자만 반복 (예: 가가가, ㅁㅁㅁ)
+    function isRepeatedChar(str) {
+      var s = str.replace(/\s/g, '');
+      return s.length >= 2 && /^(.)\1+$/.test(s);
+    }
+
+    function validateName(name) {
+      if (containsJamoOnly(name)) return '이름은 자음/모음만으로 입력할 수 없습니다.';
+      if (isRepeatedChar(name)) return '올바른 이름을 입력해주세요.';
+      if (containsProfanity(name)) return '이름에 부적절한 표현이 포함되어 있습니다.';
+      return null;
+    }
+
+    // 0101234567(연속 오름/내림), 01000000000(동일 숫자 반복) 같은 장난 번호 감지
+    function isFakePhonePattern(digits) {
+      if (/^(\d)\1+$/.test(digits)) return true;
+      var last8 = digits.slice(-8);
+      if ('0123456789'.indexOf(last8) !== -1) return true;
+      if ('9876543210'.indexOf(last8) !== -1) return true;
+      return false;
+    }
+
+    function validatePhone(phone) {
+      var digits = phone.replace(/-/g, '');
+      if (digits.length < 10 || digits.length > 11) return '올바른 연락처를 입력해주세요.';
+      if (!/^01[0-9]/.test(digits)) return '올바른 휴대폰 번호를 입력해주세요.';
+      if (isFakePhonePattern(digits)) return '올바른 연락처를 입력해주세요.';
+      return null;
+    }
+
+    function getSubmitHistory() {
+      try {
+        return JSON.parse(localStorage.getItem(SUBMIT_HISTORY_KEY) || '{"phones":[],"lastTime":0}');
+      } catch (e) {
+        return { phones: [], lastTime: 0 };
+      }
+    }
+
+    // 주의: localStorage 기반이라 "이 브라우저" 단위 제한입니다. 시크릿모드/다른 기기/
+    // 스토리지 삭제로는 우회가 가능하며, 진짜 IP 단위 차단은 서버(Apps Script 등) 쪽
+    // 로직이 필요합니다.
+    function checkSubmitLimit(phoneDigits) {
+      var history = getSubmitHistory();
+      var now = Date.now();
+
+      if (now - history.lastTime < SUBMIT_COOLDOWN_MS) {
+        return '이미 신청이 접수되었습니다. 잠시 후 다시 시도해주세요.';
+      }
+      if (history.phones.indexOf(phoneDigits) !== -1) {
+        return '이미 신청하신 번호입니다.';
+      }
+      return null;
+    }
+
+    function recordSubmit(phoneDigits) {
+      var history = getSubmitHistory();
+      history.lastTime = Date.now();
+      if (history.phones.indexOf(phoneDigits) === -1) {
+        history.phones.push(phoneDigits);
+        if (history.phones.length > 20) history.phones.shift();
+      }
+      try {
+        localStorage.setItem(SUBMIT_HISTORY_KEY, JSON.stringify(history));
+      } catch (e) {}
+    }
+
+    /* ===========================================
+       Form Submission
+       =========================================== */
+    async function handleSubmit(e) {
+      e.preventDefault();
+
+      var nameInput = document.getElementById('input-name');
+      var phoneInput = document.getElementById('input-phone');
+      var consentCheck = document.getElementById('consent-check');
+      var submitBtn = document.getElementById('submit-btn');
+
+      // Validate
+      var name = nameInput.value.trim();
+      var phone = phoneInput.value.trim();
+
+      if (!name) {
+        showToast('이름을 입력해주세요.', 'error');
+        nameInput.focus();
+        return;
+      }
+
+      var nameError = validateName(name);
+      if (nameError) {
+        showToast(nameError, 'error');
+        nameInput.focus();
+        return;
+      }
+
+      var phoneError = validatePhone(phone);
+      if (phoneError) {
+        showToast(phoneError, 'error');
+        phoneInput.focus();
+        return;
+      }
+
+      if (!consentCheck.checked) {
+        showToast('개인정보 수집에 동의해주세요.', 'error');
+        return;
+      }
+
+      var phoneDigits = phone.replace(/-/g, '');
+      var limitError = checkSubmitLimit(phoneDigits);
+      if (limitError) {
+        showToast(limitError, 'error');
+        return;
+      }
+      recordSubmit(phoneDigits);
+
+      // Prepare data
+      var now = new Date();
+      var submitTime = now.getFullYear() + '-' +
+        String(now.getMonth() + 1).padStart(2, '0') + '-' +
+        String(now.getDate()).padStart(2, '0') + ' ' +
+        String(now.getHours()).padStart(2, '0') + ':' +
+        String(now.getMinutes()).padStart(2, '0') + ':' +
+        String(now.getSeconds()).padStart(2, '0');
+
+      var info = treatmentInfo[state.selectedTreatment] || treatmentInfo.osstem;
+
+      var data = {
+        '탭': '44TK1',
+        '이름': name,
+        '연락처': phone,
+        '시술종류': info.name,
+        '시술시기': state.selectedTiming || '미선택',
+        '제출시간': submitTime
+      };
+
+      // Show loading
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="spinner"></span> 신청 중...';
+
+      // GTM: 폼 제출 시도
+      gtmPush('form_submit_attempt', {
+        treatment: data['시술종류'],
+        timing: data['시술시기']
+      });
+
+      try {
+        var response = await fetch(API_URL, {
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: { 'Content-Type': 'application/json' }
+        });
+
+        if (response.status === 429) {
+          var limitBody = await response.json().catch(function() { return {}; });
+          showToast(limitBody.error || '5분 이내 중복 신청은 제한됩니다.', 'error');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '무료 상담 신청하기';
+          return;
+        }
+
+        if (!response.ok) throw new Error('서버 오류 ' + response.status);
+
+        // GTM: 전환 이벤트
+        gtmPush('form_submit_success', {
+          treatment: data['시술종류'],
+          timing: data['시술시기']
+        });
+
+        showScreen('complete');
+
+      } catch (err) {
+        console.error('[Submit 실패]', err);
+
+        // Sheets 실패 → localStorage 백업 저장
+        saveToLocal(data);
+        gtmPush('form_submit_failed', { error: err.message });
+
+        // 사용자에게는 성공으로 안내 (리드 손실 방지)
+        showScreen('complete');
+        console.warn('[백업] localStorage에 저장됨. Sheets 복구 후 재전송 예정.');
+
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '무료 상담 신청하기';
+      }
+    }
+
+    /* ===========================================
+       Toast
+       =========================================== */
+    function showToast(message, type) {
+      var toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.className = 'toast ' + (type || 'error');
+      toast.classList.add('show');
+
+      setTimeout(function() {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    /* ===========================================
+       Share
+       =========================================== */
+    function sharePage() {
+      var shareData = {
+        title: '임플란트 어버이날 깜짝특가',
+        text: '국산 임플란트 개당 20만원! 간단뼈이식 무료! 5/10일 마감. 지금 바로 무료 상담 신청하세요.',
+        url: window.location.href
+      };
+
+      if (navigator.share) {
+        navigator.share(shareData).catch(function() {
+          // User cancelled or error
+        });
+      } else {
+        // Fallback: copy URL
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(window.location.href).then(function() {
+            showToast('링크가 복사되었습니다!', 'success');
+          }).catch(function() {
+            showToast('링크 복사에 실패했습니다.', 'error');
+          });
+        } else {
+          // Legacy fallback
+          var textArea = document.createElement('textarea');
+          textArea.value = window.location.href;
+          textArea.style.position = 'fixed';
+          textArea.style.left = '-9999px';
+          document.body.appendChild(textArea);
+          textArea.select();
+          try {
+            document.execCommand('copy');
+            showToast('링크가 복사되었습니다!', 'success');
+          } catch (e) {
+            showToast('링크 복사에 실패했습니다.', 'error');
+          }
+          document.body.removeChild(textArea);
+        }
+      }
+    }
+
+    /* ===========================================
+       Go Home (Reset)
+       =========================================== */
+    function goHome() {
+      // Reset state
+      state.selectedTreatment = null;
+      state.selectedTiming = null;
+
+      // Reset form
+      document.getElementById('consultation-form').reset();
+      document.getElementById('consent-check').checked = true;
+
+      // Close privacy if open
+      var privacyContent = document.getElementById('privacy-content');
+      privacyContent.classList.remove('open');
+
+      showScreen('landing');
+    }
+
+    /* ===========================================
+       Countdown Timer — 매주 일요일 23:59:59 마감, 월요일 자동 재시작
+       =========================================== */
+    function getWeeklyDeadline() {
+      var now = new Date();
+      var day = now.getDay(); // 0=일, 1=월 ... 6=토
+      var daysUntilSunday = day === 0 ? 0 : 7 - day;
+      var deadline = new Date(now);
+      deadline.setDate(now.getDate() + daysUntilSunday);
+      deadline.setHours(23, 59, 59, 0);
+      return deadline;
+    }
+
+    function updateCountdown() {
+      var now = new Date();
+      var deadline = getWeeklyDeadline();
+      var diff = deadline - now;
+
+      var el = document.getElementById('countdown-timer');
+      if (!el) return;
+
+      if (diff <= 0) {
+        el.textContent = '00:00:00';
+        return;
+      }
+
+      var days    = Math.floor(diff / (1000 * 60 * 60 * 24));
+      var hours   = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      var text = '';
+      if (days > 0) text += days + '일 ';
+      text += String(hours).padStart(2,'0') + ':' +
+              String(minutes).padStart(2,'0') + ':' +
+              String(seconds).padStart(2,'0');
+
+      el.textContent = text;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    /* ===========================================
+       Init
+       =========================================== */
+    startNotifications();
+
+    // 페이지 진입 GTM 이벤트
+    gtmPush('page_view', { page: 'implant_landing_ad' });
+
+    // 이전 실패 데이터 재전송 시도
+    retryPendingLeads();
+  </script>
+</body>
+</html>
