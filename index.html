@@ -1243,8 +1243,8 @@
     /* ===========================================
        Configuration
        =========================================== */
-    // Apps Script URL은 서버(api/submit.js)로 이동. 브라우저는 항상 /api/submit만 호출.
-    const API_URL = '/api/submit';
+    // 본인의 Google Apps Script 웹앱 배포 주소로 교체하세요 (.../exec 로 끝남)
+    const SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL';
     const LS_KEY = 'implant_pending_leads_ad';    // 광고 랜딩 전용 localStorage 키
 
     /* ===========================================
@@ -1267,16 +1267,17 @@
     }
 
     async function retryPendingLeads() {
+      if (SCRIPT_URL === 'YOUR_APPS_SCRIPT_URL') return;
       try {
         var list = JSON.parse(localStorage.getItem(LS_KEY) || '[]');
         if (!list.length) return;
         var remaining = [];
         for (var i = 0; i < list.length; i++) {
           try {
-            var resp = await fetch(API_URL, {
+            var resp = await fetch(SCRIPT_URL, {
               method: 'POST',
               body: JSON.stringify(list[i]),
-              headers: { 'Content-Type': 'application/json' }
+              headers: { 'Content-Type': 'text/plain' }
             });
             if (!resp.ok) remaining.push(list[i]);
           } catch (e) {
@@ -1616,21 +1617,18 @@
       });
 
       try {
-        var response = await fetch(API_URL, {
-          method: 'POST',
-          body: JSON.stringify(data),
-          headers: { 'Content-Type': 'application/json' }
-        });
-
-        if (response.status === 429) {
-          var limitBody = await response.json().catch(function() { return {}; });
-          showToast(limitBody.error || '5분 이내 중복 신청은 제한됩니다.', 'error');
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = '무료 상담 신청하기';
-          return;
+        if (SCRIPT_URL === 'YOUR_APPS_SCRIPT_URL') {
+          // 데모 모드: 실제 주소로 교체하기 전까지는 전송 없이 콘솔에만 기록
+          await new Promise(function(resolve) { setTimeout(resolve, 1000); });
+          console.log('[Demo] 제출 데이터:', data);
+        } else {
+          var response = await fetch(SCRIPT_URL, {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: { 'Content-Type': 'text/plain' }
+          });
+          if (!response.ok) throw new Error('서버 오류 ' + response.status);
         }
-
-        if (!response.ok) throw new Error('서버 오류 ' + response.status);
 
         // GTM: 전환 이벤트
         gtmPush('form_submit_success', {
